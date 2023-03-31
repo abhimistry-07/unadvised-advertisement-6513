@@ -1,53 +1,73 @@
 import {
   Box,
   Flex,
-  Button,
-  useColorModeValue,
-  Stack,
-  useColorMode,
-  Show,
   HStack,
   Input,
   Text,
-  useDisclosure,
-  IconButton,
-  Hide,
   Image,
+  IconButton,
 } from "@chakra-ui/react";
 
-import {
-  MoonIcon,
-  SunIcon,
-  HamburgerIcon,
-  CloseIcon,
-  AddIcon,
-  Search2Icon,
-} from "@chakra-ui/icons";
+import { SearchIcon } from "@chakra-ui/icons";
+
+import { VscAccount } from "react-icons/vsc";
+
+import { MdShoppingCart } from "react-icons/md";
+
+// import styles from "./HomePage.module.css"
 
 function MiddleNavbar() {
-//   const { isOpen, onOpen, onClose } = useDisclosure();
-//   const { colorMode, toggleColorMode } = useColorMode();
+  //   const { isOpen, onOpen, onClose } = useDisclosure();
+  //   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Box id="navFix">
       <Box bg="#06f" px={9} width={["100%"]}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <HStack w="42%">
-            <Image src="../Images/logo.png" />
-            <Input
-              placeholder="Search"
-              width="auto"
-              variant="outline"
-              backgroundColor="white"
-            ></Input>
-            <Search2Icon
-              color=""
-              backgroundColor="white"
-              size="20px"
-              padding="0px"
-              marginLeft="0px"
-            />
+        <Flex h={16} alignItems={"center"}>
+          <Image src="images/logo.png" width="155px" />
+          <HStack marginLeft="100px">
+            <Flex
+            // border={"1px solid red"}
+            >
+              <Input
+                // className={styles.searchBar}
+                minWidth="600px"
+                placeholder="Search"
+                // width="auto"
+                variant="outline"
+                backgroundColor="white"
+                borderBottomEndRadius={"0px"}
+                borderTopRightRadius={"0px"}
+              ></Input>
+
+              <IconButton
+                borderTopLeftRadius={"0px"}
+                borderBottomStartRadius={"0px"}
+                backgroundColor={"white"}
+                aria-label="Search database"
+                icon={<SearchIcon />}
+              />
+            </Flex>
           </HStack>
+          <Flex
+            marginLeft="100px"
+            justifyContent="space-between"
+            width={"800px"}
+            textAlign="center"
+            // border={"1px solid red"}
+          >
+            <Text color="white">Ship to</Text>
+            <Image src="images/flag.png" width="35px" />
+
+            <HStack marginLeft="15px">
+              <VscAccount color="white" />
+              <Text marginLeft="10px" color="white">
+                Sign in
+              </Text>
+            </HStack>
+            <MdShoppingCart color="white" />
+            {/* </Flex> */}
+          </Flex>
         </Flex>
       </Box>
     </Box>
