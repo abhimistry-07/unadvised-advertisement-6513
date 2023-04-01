@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import Navbar from "../HomePage/Navbar";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { BsHeart } from "react-icons/bs";
@@ -28,6 +28,12 @@ function ElectronicBikes() {
 
   const [cart, setCart] = useState([]);
 
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
   const handleFavBtnClick = (item) => {
     if (isLiked.includes(item)) {
       // console.log(item)
@@ -38,13 +44,13 @@ function ElectronicBikes() {
   };
 
   const handleAddCart = (newItem) => {
-    if (cart.includes(newItem)){
-    // if (cart.map((item) => item.id === newItem.id)) {
+    if (cart.includes(newItem)) {
+      // if (cart.map((item) => item.id === newItem.id)) {
 
-        alert("This item is already in your cart!");
+      alert("This item is already in your cart!");
     } else {
       setCart([...cart, newItem]);
-      alert("Item Added to cart")
+      alert("Item Added to cart");
     }
   };
 
@@ -65,7 +71,7 @@ function ElectronicBikes() {
 
   return (
     <Box>
-      <Navbar />
+      <Navbar onSearch={handleSearch} />
       <Flex>
         <Box className="functionalityPart" w={1000}></Box>
         <Box className="productPart" border="1px solid red" p={5}>

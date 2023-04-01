@@ -14,11 +14,17 @@ import { VscAccount } from "react-icons/vsc";
 
 import { MdShoppingCart } from "react-icons/md";
 
+import { useState } from "react";
+
 // import styles from "./HomePage.module.css"
 
 function MiddleNavbar() {
   //   const { isOpen, onOpen, onClose } = useDisclosure();
   //   const { colorMode, toggleColorMode } = useColorMode();
+  const [data, setData] = useState([]);
+  const [inputVlaue, setInputValue] = useState("");
+
+  console.log(inputVlaue);
 
   return (
     <Box id="navFix">
@@ -38,6 +44,7 @@ function MiddleNavbar() {
                 backgroundColor="white"
                 borderBottomEndRadius={"0px"}
                 borderTopRightRadius={"0px"}
+                onChange={(e) => setInputValue(e.target.value)}
               ></Input>
 
               <IconButton
