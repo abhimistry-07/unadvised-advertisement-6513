@@ -1,26 +1,21 @@
-.navbar{
+.navbar {
     /* border: 1px solid black; */
     margin-left: 100px;
 }
 
-/* .btnRes{
-    /* background-color: #06f; */
-/* } */ 
-
 /* Mid section */
-.midSection{
+.midSection {
     margin-top: 50px;
-    
+
 }
-.card{
+
+.card {
     border: 5px solid #06f;
     margin: auto;
     border-radius: 10px;
 }
-.imagetext{
+
+.imagetext {
     background-color: #06f;
     color: white;
 }
-
-
-
