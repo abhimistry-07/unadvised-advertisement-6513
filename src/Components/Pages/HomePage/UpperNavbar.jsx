@@ -33,7 +33,7 @@ function UpperNavBar() {
   //   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box className="head_top" bg="#06f">
+    <Box className="head_top" bg="#06f" width={"100%"}>
       <Flex ml="800px">
         <Menu
           // isOpen={downloadApp}
@@ -170,40 +170,5 @@ function UpperNavBar() {
     </Box>
   );
 }
-
-//   const Navbar = () => {
-//     return (
-//       <Flex
-//         as="nav"
-//         align="center"
-//         justify="space-between"
-//         wrap="wrap"
-//         bg="teal.500"
-//         color="white"
-//         padding="1rem"
-//       >
-//         <Box>
-//           <Button variant="ghost" color="white">
-//             Logo
-//           </Button>
-//         </Box>
-
-//         <Box display={{ base: "none", md: "block" }}>
-//           <Menu>
-//             <MenuButton as={Button} rightIcon="chevron-down">
-//               Dropdown
-//             </MenuButton>
-//             <MenuList>
-//               <MenuItem>Item 1</MenuItem>
-//               <MenuItem>Item 2</MenuItem>
-//               <MenuDivider />
-//               <MenuItem>Item 3</MenuItem>
-//             </MenuList>
-//           </Menu>
-//         </Box>
-//       </Flex>
-//     );
-//   };
-//   export default Navbar;
 
 export default UpperNavBar;
