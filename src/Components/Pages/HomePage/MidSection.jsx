@@ -16,7 +16,6 @@ import SecondSlider from "./SecondSlider";
 import { redirect } from "react-router";
 
 function MidSection() {
-
   const navigate = useNavigate();
 
   const NavigateToBike = () => {
@@ -141,7 +140,7 @@ function MidSection() {
           gap={"5"}
           templateColumns="repeat(3, 1fr)"
           width="90%"
-          border={"1px solid red"}
+          // border={"1px solid red"}
           margin="auto"
           marginTop={"5"}
         >
@@ -243,35 +242,35 @@ function MidSection() {
         </Grid>
       </Box>
 
-      <Box className="bestSellers" m={"5"}>
+      {/* <Box className="bestSellers" m={"5"}>
         <Text fontSize="3xl" as="b" m="574">
           Best Sellers
         </Text>
         <Box width={"100%"}>
-          {/* <FirstSlider /> */}
+          <FirstSlider />
           <SecondSlider />
         </Box>
-      </Box>
+      </Box> */}
 
-      <Box className="popularBrands">
+      {/* <Box className="popularBrands">
         <Text fontSize="3xl" as="b" ml="568">
           Popular Brands
         </Text>
         <Box width={"100%"}>
-          {/* <FirstSlider /> */}
-          {/* <SecondSlider /> */}
+          <FirstSlider />
+          <SecondSlider />
         </Box>
-      </Box>
+      </Box> */}
 
-      <Box className="recommendedForYou">
+      {/* <Box className="recommendedForYou">
         <Text fontSize="3xl" as="b" ml="511">
           Recommended For You
         </Text>
         <Box width={"100%"}>
-          {/* <FirstSlider /> */}
-          {/* <SecondSlider /> */}
+          <FirstSlider />
+          <SecondSlider />
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

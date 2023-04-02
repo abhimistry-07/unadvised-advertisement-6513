@@ -41,7 +41,7 @@ function ElectronicBikes() {
     setSearchQuery(query);
   };
   // console.log(searchQuery,"bikkkkkkkkkk>>>>>>>")
-
+// console.log(cart)
   const handleFavBtnClick = (item) => {
     if (isLiked.includes(item)) {
       // console.log(item)
@@ -83,28 +83,12 @@ function ElectronicBikes() {
       }
       return false;
     });
-    console.log(data);
-    console.log("filteredItems", filteredItems);
-    console.log("ratedMotorPower", ratedMotorPower);
+    // console.log(data);
+    // console.log("filteredItems", filteredItems);
+    // console.log("ratedMotorPower", ratedMotorPower);
     setData(filteredItems);
     // return filteredItems;
   };
-
-  // useEffect(() => {
-  //   if (!selected) {
-  //     axios
-  //       .get(`http://localhost:8080/electricBikes`)
-  //       .then((res) => {
-  //         setData(res.data);
-  //         filterData();
-  //       })
-  //       .catch((error) => {
-  //         console.log(error);
-  //       });
-  //   } else {
-  //     filterData();
-  //   }
-  // }, [ratedMotorPower, batteryCapacity, type, speed, selected]);
 
   // useEffect(() => {
   //   if (!selected) {
@@ -164,6 +148,7 @@ function ElectronicBikes() {
         onChange={handleSearch}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        cartData={cart}
       />
       <Flex>
         <Box className="functionalityPart" w={800}>
@@ -249,7 +234,10 @@ function ElectronicBikes() {
           </Card>
         </Box>
 
-        <Box className="productPart" border="1px solid red" p={5}>
+        <Box className="productPart" 
+        // border="1px solid red" 
+        width="300%"
+        p={5}>
           <Grid templateColumns="repeat(3, 1fr)" gap={4}>
             {data?.map((item) => {
               return (
