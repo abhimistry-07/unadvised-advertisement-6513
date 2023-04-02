@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import Error from './Components/Pages/ErrorPage';
 import ElectronicBikes from './Components/Pages/ProductPage/ElectronicsBike';
+import CartPage from './Components/Pages/Cart/CartPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<HomePage />}></Route>
         <Route path='/electronicbikes' element={<ElectronicBikes />}></Route>
         <Route path='/electronicbikes/:id' element={<ElectronicBikes />}></Route>
+        <Route path='/cartPage' element={<CartPage />}></Route>
         <Route path='*' element={<Error />}></Route>
       </Routes>
 

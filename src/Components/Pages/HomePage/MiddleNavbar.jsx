@@ -18,13 +18,19 @@ import { useState } from "react";
 
 // import styles from "./HomePage.module.css"
 
+import { useNavigate } from "react-router";
+
 function MiddleNavbar(props) {
-  //   const { isOpen, onOpen, onClose } = useDisclosure();
-  //   const { colorMode, toggleColorMode } = useColorMode();
+  const navigate = useNavigate();
+
+  const NavigateToCart = () => {
+    navigate("/cartPage");
+  };
+
   const [data, setData] = useState([]);
   const [inputVlaue, setInputValue] = useState("");
 
-  console.log(props, ">>>>>>");
+  console.log(props, "props>>>>>>");
 
   return (
     <Box id="navFix">
@@ -77,7 +83,7 @@ function MiddleNavbar(props) {
                 Sign in
               </Text>
             </HStack>
-            <MdShoppingCart color="white" />
+            <MdShoppingCart  color="white" size={23} onClick={NavigateToCart} />
             {/* </Flex> */}
           </Flex>
         </Flex>
