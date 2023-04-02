@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import MidSection from "./MidSection";
 import Footer from "./Footer";
+import { useState } from "react";
 
 function HomePage() {
   return (

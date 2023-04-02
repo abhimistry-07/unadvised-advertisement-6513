@@ -18,13 +18,13 @@ import { useState } from "react";
 
 // import styles from "./HomePage.module.css"
 
-function MiddleNavbar() {
+function MiddleNavbar(props) {
   //   const { isOpen, onOpen, onClose } = useDisclosure();
   //   const { colorMode, toggleColorMode } = useColorMode();
   const [data, setData] = useState([]);
   const [inputVlaue, setInputValue] = useState("");
 
-  console.log(inputVlaue);
+  console.log(props, ">>>>>>");
 
   return (
     <Box id="navFix">
@@ -36,6 +36,7 @@ function MiddleNavbar() {
             // border={"1px solid red"}
             >
               <Input
+                value={props.searchQuery}
                 // className={styles.searchBar}
                 minWidth="600px"
                 placeholder="Search"
@@ -44,7 +45,11 @@ function MiddleNavbar() {
                 backgroundColor="white"
                 borderBottomEndRadius={"0px"}
                 borderTopRightRadius={"0px"}
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={(e) => {
+                  props.setSearchQuery(e.target.value);
+                  props.onChange(e.target.value);
+                }}
+                // inputVlaue={inputVlaue}
               ></Input>
 
               <IconButton
