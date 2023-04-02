@@ -2,11 +2,16 @@ import LowerNavbar from "./LowerNavbar";
 import MiddleNavbar from "./MiddleNavbar";
 import UpperNavBar from "./UpperNavbar";
 
-function Navbar() {
+function Navbar(props) {
+  console.log(props);
   return (
     <nav>
       <UpperNavBar />
-      <MiddleNavbar />
+      <MiddleNavbar
+        onChange={props?.onChange}
+        searchQuery={props?.searchQuery}
+        setSearchQuery={props?.setSearchQuery}
+      />
       <LowerNavbar />
     </nav>
   );
