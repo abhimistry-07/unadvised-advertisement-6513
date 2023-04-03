@@ -58,7 +58,7 @@ function CartPage(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/allData`)
+      .get(`https://electroweb-api.onrender.com/allData`)
       .then((res) => {
         setCartData(
           res.data.map((item) => ({

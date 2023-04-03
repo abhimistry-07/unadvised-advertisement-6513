@@ -163,7 +163,7 @@ function Login() {
               </AlertDialogHeader>
 
               <AlertDialogBody>
-                Your Login pin <strong>{randomCode}</strong>. Please enter this
+                Your Login pin is<strong>{randomCode}</strong>. Please enter this
                 code to authenticate.
               </AlertDialogBody>
 

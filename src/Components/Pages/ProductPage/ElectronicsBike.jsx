@@ -116,7 +116,7 @@ function ElectronicBikes() {
     if (searchQuery) {
       const fetchAndRenderData = setTimeout(() => {
         axios
-          .get(`http://localhost:8080/electricBikes?q=${searchQuery}`)
+          .get(`https://electroweb-api.onrender.com/electricBikes?q=${searchQuery}`)
           .then((res) => {
             setData(res.data);
             let filter = res.data.filter((item) => {
@@ -131,7 +131,7 @@ function ElectronicBikes() {
       return () => clearTimeout(fetchAndRenderData);
     } else {
       axios
-        .get(`http://localhost:8080/electricBikes`)
+        .get(`https://electroweb-api.onrender.com/electricBikes`)
         .then((res) => {
           setData(res.data);
           // filterData();
