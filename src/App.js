@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import Error from './Components/Pages/ErrorPage';
 import ElectronicBikes from './Components/Pages/ProductPage/ElectronicsBike';
 import CartPage from './Components/Pages/Cart/CartPage';
+import Login from './Components/Pages/Login/LoginPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/electronicbikes' element={<ElectronicBikes />}></Route>
         <Route path='/electronicbikes/:id' element={<ElectronicBikes />}></Route>
         <Route path='/cartPage' element={<CartPage />}></Route>
+        <Route path='/login' element={<Login/>}></Route>
         <Route path='*' element={<Error />}></Route>
       </Routes>
 

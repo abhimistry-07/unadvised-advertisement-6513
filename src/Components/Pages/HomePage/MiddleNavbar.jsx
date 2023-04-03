@@ -27,6 +27,10 @@ function MiddleNavbar(props) {
     navigate("/cartPage");
   };
 
+  const NavigateToLogIn = () =>{
+    navigate("/login");
+  }
+
   const [data, setData] = useState([]);
   const [inputVlaue, setInputValue] = useState("");
 
@@ -79,8 +83,10 @@ function MiddleNavbar(props) {
 
             <HStack marginLeft="15px">
               <VscAccount color="white" />
-              <Text marginLeft="10px" color="white">
-                Sign in
+              <Text marginLeft="10px" color="white" 
+              onClick={NavigateToLogIn}
+              >
+                Sign in 
               </Text>
             </HStack>
             <MdShoppingCart  color="white" size={23} onClick={NavigateToCart} />
